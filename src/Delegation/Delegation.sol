@@ -6,7 +6,7 @@ contract Delegate {
 
   address public owner;
 
-  constructor(address _owner) public {
+  constructor(address _owner) {
     owner = _owner;
   }
 

@@ -21,7 +21,7 @@ contract GatekeeperTwo {
     unchecked {
         require(uint64(bytes8(keccak256(abi.encodePacked(msg.sender)))) ^ uint64(_gateKey) == uint64(0) - 1);
     }
-    
+
     _;
   }
 

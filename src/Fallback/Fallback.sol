@@ -9,7 +9,7 @@ contract Fallback {
   mapping(address => uint) public contributions;
   address payable public owner;
 
-  constructor() public {
+  constructor() {
     owner = payable(msg.sender); // Type issues must be payable address
     contributions[msg.sender] = 1000 * (1 ether);
   }
@@ -38,7 +38,6 @@ contract Fallback {
     owner.transfer(address(this).balance);
   }
 
-  
   fallback() external payable { // naming has switched to fallback
     require(msg.value > 0 && contributions[msg.sender] > 0, "tx must have value and msg.send must have made a contribution"); // Add message with require
     owner = payable(msg.sender); // Type issues must be payable address
