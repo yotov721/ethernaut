@@ -1,6 +1,6 @@
 # ethernaut-x-foundry
 
-## Ethernaut puzzles solved & tested with foundry.
+## Ethernaut puzzles with foundry.
 
 **Ethernaut**
 
